@@ -21,7 +21,7 @@ module "venues_get" {
   source      = "./modules/api_method"
   rest_api_id = "${aws_api_gateway_rest_api.venues_api.id}"
   resource_id = "${aws_api_gateway_resource.venues_api_resource.id}"
-  method      = "GET"
+  method      = "POST"
   path        = "${aws_api_gateway_resource.venues_api_resource.path}"
   lambda      = "${module.venues_lambda.name}"
   region      = "${var.region}"
